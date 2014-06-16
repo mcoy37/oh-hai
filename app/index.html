@@ -1,0 +1,137 @@
+---
+layout: default
+title:  Home
+---
+
+  <div class="editor-container">
+    <div class="editor-column">
+      <pre id="editor" data-target="#preview">
+Just Another Markdown Editor
+============================
+
+I've never been a fan of `wysiwyg` editor and the markup that it generates, I
+think Markdown is the way to go. srsly. :D
+
+
+Headings
+--------
+
+h1. Markdown Heading
+====================
+
+h2. Markdown Heading
+--------------------
+
+### h3. Markdown Heading
+#### h4. Markdown Heading
+##### h5. Markdown Heading
+###### h6. Markdown Heading
+
+Pargraph
+--------
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non quam feugiat,
+mollis sem in, egestas est. Donec vel mauris consequat, bibendum diam ac, accumsan
+magna. Aenean massa ipsum, commodo vel erat vel, vestibulum tristique massa.
+
+Etiam congue ante a malesuada ullamcorper. Nulla sollicitudin
+arcu mauris, quis convallis mi porta a. Nam at scelerisque metus, vitae
+sollicitudin dolor.
+
+> Nunc at tristique arcu. Donec quis porttitor neque. Curabitur tristique libero in
+> ipsum interdum malesuada. Integer eget ipsum vitae ligula accumsan pellentesque.
+> Nam sed pharetra neque. Nam in urna nisl. Vivamus eu fermentum augue.
+
+Lists
+-----
+
+**Unordered List**
+
+- Lorem ipsum dolor sit amet
+- Consectetur adipiscing elit
+- Integer molestie lorem at massa
+  - Facilisis in pretium nisl aliquet
+  - Nulla volutpat aliquam velit
+  - Phasellus iaculis neque
+- Purus sodales ultricies
+- Vestibulum laoreet porttitor sem
+- Ac tristique libero volutpat at
+- Faucibus porta lacus fringilla vel
+
+**Ordered List**
+
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa
+4. Facilisis in pretium nisl aliquet
+5. Nulla volutpat aliquam velit
+6. Phasellus iaculis neque
+7. Purus sodales ultricies
+8. Vestibulum laoreet porttitor sem
+9. Ac tristique libero volutpat at
+10. Faucibus porta lacus fringilla vel
+
+Emphasis
+--------
+
+The following snippet of text is **rendered as bold text**.
+
+The following snippet of text is **rendered as italicized text**.
+
+Link
+----
+
+- [Google](http://google.com/)
+- [Yahoo](http://yahoo.com/)
+- [MSN](http://msn.com/)
+
+Image
+-----
+
+![alternate text goes here](http://i.imgur.com/8eU5o.png)
+
+Code
+----
+
+### Inline Code
+
+Use single backticks (`) to format text in a special monospace format.
+Everything within the backticks appear as-is, with no other special formatting.
+
+For example, `&lt;code>section&lt;/code&gt;` should be wrapped as inline.
+
+### Code Block
+
+You can use triple backticks (```) to format text as its own distinct block.
+
+
+```html
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Document Title&lt;/title&gt;
+
+  &lt;meta name="author" content="author_name"&gt;
+  &lt;meta name="description" content="description goes here"&gt;
+  &lt;meta name="keywords" content="keywords goes here"&gt;
+
+  &lt;link rel="stylesheet" href="/path/to/stylesheet.css"&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- content goes here --&gt;
+  ...
+
+  &lt;script src="/path/to/jquery.js"&gt;&lt;/script&gt;
+  &lt;script src="/path/to/app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+```
+    </div>
+
+    <div class="editor-column">
+      <div class="output-preview" id="preview"></div>
+    </div>
+  </div><!-- end of .editor-fluid -->

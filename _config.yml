@@ -1,0 +1,36 @@
+
+# Site Information
+# -----------------------------------------------------------------------------
+
+title:        "Just another Markdown Edtior"
+tagline:      "Export Markdown or HTML files."
+version:      "0.1.0"
+
+author:      "Pongstr"
+description: "Export Markdown or HTML files."
+keywords:    ""
+
+
+# Repository
+repository:   "http://github.com/pongstr/oh-hai/"
+issues:       "http://github.com/pongstr/oh-hai/issues"
+
+
+# Format
+# -----------------------------------------------------------------------------
+markdown:     kramdown
+permalink:    pretty
+highlighter:  false
+paginate:     5
+
+
+# Build Info
+# -----------------------------------------------------------------------------
+source:       app
+exclude:      ['Gruntfile.js', 'package.json', 'bower.json', 'node_modules', 'bower_components', 'source']
+
+# Server
+host:         localhost
+port:         4001
+baseurl:      /
+destination:  _gh_pages

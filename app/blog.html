@@ -1,0 +1,21 @@
+---
+layout: default
+title:  Blog
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+      {% for post in site.posts %}
+      <div class="media">
+        <div class="media-body">
+          <h3>{{ post.title }} <br> <small>{{ post.date | date_to_string }}</small></h3>
+          <section>
+            {{ post.content }}
+          </section>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

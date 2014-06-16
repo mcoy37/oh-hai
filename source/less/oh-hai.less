@@ -1,0 +1,123 @@
+
+//
+
+html,
+body,
+[role="main"] {
+  height: 100%;
+  overflow: hidden;
+}
+
+:focus { outline: 0 none; }
+
+header {
+  height: @navbar-height;
+}
+
+.editor-container {
+  .clearfix();
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: @navbar-height;
+
+  .editor-column {
+    float: left;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.editor-column .ace_editor,
+.editor-column .output-preview {
+  height: 100%;
+  margin: 0;
+  border: 0 none;
+  border-radius: 0;
+}
+
+.editor-column .output-preview {
+  max-height: 100%;
+  padding: (@grid-gutter-width / 2) @grid-gutter-width;
+  overflow-y: scroll;
+
+  // Typography
+  // ==========
+  h1, h2 {
+    margin-bottom: (@grid-gutter-width - (@grid-gutter-width / 2));
+    padding-bottom: (@grid-gutter-width / 2);
+    border-bottom: 1px solid @gray-lighter;
+    // background-image: url("/assets/img/github-hr.png");
+    // background-repeat: repeat-x;
+    // background-position: left bottom;
+  }
+
+  pre, code {
+    background-color: transparent;
+    border-radius: 0;
+  }
+}
+
+// Google Prettify Code Colors
+// ==========================================================================
+
+.str,
+.atv { color: #D14; }
+
+.pun,
+.opn,
+.clo { color: #93a1a1; }
+
+.kwd,
+.prettyprint
+.tag { color: #1e347b; }
+
+.typ,
+.atn,
+.dec,
+.var { color: teal; }
+
+.lit { color: #195f91; }
+.fun { color: #dc322f; }
+.pln { color: #48484c; }
+.com {
+  font-style: italic;
+  color: #93a1a1;
+}
+
+
+// Prettyprint Styles
+.prettyprint {
+  background-color:   #f7f7f9;
+  // border:             1px solid #e1e1e8;
+}
+
+// Pretty Print with Line Numbers shadow
+.prettyprint.linenums {
+  .box-shadow(inset 40px 0 0 #fbfbfc);
+}
+
+
+.prettyprint ol.linenums {
+  margin-top: -10px;
+  margin-bottom: -10px;
+  margin-left: -10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: inset 40px 0 0 #eee;
+}
+
+.prettyprint ol.linenums > li {
+  padding-left: 12px;
+  color: #bebec5;
+  line-height: 1.5;
+  text-shadow: 0 1px 0 #fff;
+}
+
+// Line Numbers IE Specific: IE indents via margin-left
+.lt-ie9 .prettyprint ol.linenums {
+  margin:       0;
+  margin-left:  33px;
+}
