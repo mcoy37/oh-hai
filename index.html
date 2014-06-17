@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+
+  <title>
+    
+      Just another Markdown Edtior - Export Markdown or HTML files.
+    
+  </title>
+
+  <meta name="author" content="Pongstr">
+  <meta name="description" content="Export Markdown or HTML files.">
+  <meta name="keywords" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="stylesheet" href="/assets/css/oh-hai-hello.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+  
+  <header>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            oh-hai-hello
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li>
+              <a data-toggle="modal" href="#export">
+                <i class="glyphicon glyphicon-floppy-disk"></i> &nbsp;Export File
+              </a>
+            </li>
+          </ul>
+        </div><!-- end of .navbar-collapse -->
+      </div><!-- end of .container-fluid -->
+    </nav>
+  </header>
+
+
+  <div role="main">
+      <div class="editor-container">
+    <div class="editor-column">
+      <pre id="editor" data-target="#preview">
+Just Another Markdown Editor
+============================
+
+I've never been a fan of `wysiwyg` editor and the markup that it generates, I
+think Markdown is the way to go. srsly. :D
+
+
+Headings
+--------
+
+h1. Markdown Heading
+====================
+
+h2. Markdown Heading
+--------------------
+
+### h3. Markdown Heading
+#### h4. Markdown Heading
+##### h5. Markdown Heading
+###### h6. Markdown Heading
+
+Pargraph
+--------
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non quam feugiat,
+mollis sem in, egestas est. Donec vel mauris consequat, bibendum diam ac, accumsan
+magna. Aenean massa ipsum, commodo vel erat vel, vestibulum tristique massa.
+
+Etiam congue ante a malesuada ullamcorper. Nulla sollicitudin
+arcu mauris, quis convallis mi porta a. Nam at scelerisque metus, vitae
+sollicitudin dolor.
+
+> Nunc at tristique arcu. Donec quis porttitor neque. Curabitur tristique libero in
+> ipsum interdum malesuada. Integer eget ipsum vitae ligula accumsan pellentesque.
+> Nam sed pharetra neque. Nam in urna nisl. Vivamus eu fermentum augue.
+
+Lists
+-----
+
+**Unordered List**
+
+- Lorem ipsum dolor sit amet
+- Consectetur adipiscing elit
+- Integer molestie lorem at massa
+  - Facilisis in pretium nisl aliquet
+  - Nulla volutpat aliquam velit
+  - Phasellus iaculis neque
+- Purus sodales ultricies
+- Vestibulum laoreet porttitor sem
+- Ac tristique libero volutpat at
+- Faucibus porta lacus fringilla vel
+
+**Ordered List**
+
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa
+4. Facilisis in pretium nisl aliquet
+5. Nulla volutpat aliquam velit
+6. Phasellus iaculis neque
+7. Purus sodales ultricies
+8. Vestibulum laoreet porttitor sem
+9. Ac tristique libero volutpat at
+10. Faucibus porta lacus fringilla vel
+
+Emphasis
+--------
+
+The following snippet of text is **rendered as bold text**.
+
+The following snippet of text is **rendered as italicized text**.
+
+Link
+----
+
+- [Google](http://google.com/)
+- [Yahoo](http://yahoo.com/)
+- [MSN](http://msn.com/)
+
+Image
+-----
+
+![alternate text goes here](http://i.imgur.com/8eU5o.png)
+
+Code
+----
+
+### Inline Code
+
+Use single backticks (`) to format text in a special monospace format.
+Everything within the backticks appear as-is, with no other special formatting.
+
+For example, `&lt;code>section&lt;/code&gt;` should be wrapped as inline.
+
+### Code Block
+
+You can use triple backticks (```) to format text as its own distinct block.
+
+
+```html
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Document Title&lt;/title&gt;
+
+  &lt;meta name="author" content="author_name"&gt;
+  &lt;meta name="description" content="description goes here"&gt;
+  &lt;meta name="keywords" content="keywords goes here"&gt;
+
+  &lt;link rel="stylesheet" href="/path/to/stylesheet.css"&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- content goes here --&gt;
+  ...
+
+  &lt;script src="/path/to/jquery.js"&gt;&lt;/script&gt;
+  &lt;script src="/path/to/app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+```
+    </div>
+
+    <div class="editor-column">
+      <div class="output-preview" id="preview"></div>
+    </div>
+  </div><!-- end of .editor-fluid -->
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="export" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Export Document</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <small class="help-block">Please enter a filename, no need to include file extension.</small>
+            <input type="text" id="filename" name="filename" class="form-control" placeholder="Enter Filename" required>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer text-center">
+        <button data-toggle="export" data-type="markdown" type="button" class="btn btn-primary">
+          <i class="glyphicon glyphicon-download"></i> Export Markdown
+        </button>
+
+        <button data-toggle="export" data-type="html" type="button" class="btn btn-primary">
+          <i class="glyphicon glyphicon-download"></i> Export HTML
+        </button>
+        <!--
+        <button type="button" class="btn btn-primary">
+          <i class="glyphicon glyphicon-download"></i> Export Flatdoc
+        </button>
+         -->
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+  <!-- jQuery stuff goes here -->
+  <script src="/assets/js/lib/jquery/jquery.min.js"></script>
+  <script src="/assets/js/lib/bootstrap/bootstrap.min.js"></script>
+  <script src="/assets/js/lib/ace-build/ace.js"></script>
+  <script src="/assets/js/lib/ace-build/mode-markdown.js"></script>
+  <script src="/assets/js/lib/ace-build/theme-github.js"></script>
+  <script src="/assets/js/lib/filesaver/FileSaver.js"></script>
+  <script src="/assets/js/lib/jszip/jszip.js"></script>
+
+  <!-- Your application Javasscript goes here  -->
+  <script src="/assets/js/app/prettify.js"></script>
+  <script src="/assets/js/app/marked.js"></script>
+  <script src="/assets/js/app/app.js"></script>
+
+</body>
+</html>

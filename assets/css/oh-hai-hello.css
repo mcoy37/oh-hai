@@ -5784,6 +5784,9 @@ body,
 header {
   height: 50px;
 }
+.modal-footer {
+  text-align: center !important;
+}
 .editor-container {
   position: fixed;
   top: 0;
