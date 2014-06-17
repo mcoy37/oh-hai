@@ -33,13 +33,6 @@ module.exports = function(grunt) {
             src: ['<%= site.bower %>/bootstrap/dist/fonts/*'],
             dest: '<%= site.app %>/assets/fonts/bootstrap/',
             filter: 'isFile'
-          },
-          { // Font-Awesome Glyphs
-            expand: true,
-            flatten: true,
-            src: ['<%= site.bower %>/font-awesome/fonts/*'],
-            dest: '<%= site.app %>/assets/fonts/font-awesome/',
-            filter: 'isFile'
           }
         ]
       },
@@ -62,6 +55,20 @@ module.exports = function(grunt) {
             flatten: true,
             src: ['<%= site.bower %>/bootstrap/dist/js/*'],
             dest: '<%= site.app %>/assets/js/lib/bootstrap/',
+            filter: 'isFile'
+          },
+          { // Copy FileSaver
+            expand: true,
+            flatten: true,
+            src: ['<%= site.bower %>/FileSaver/*.js'],
+            dest: '<%= site.app %>/assets/js/lib/filesaver/',
+            filter: 'isFile'
+          },
+          { // Copy JsZip
+            expand: true,
+            flatten: true,
+            src: ['<%= site.bower %>/jszip/dist/*.js*'],
+            dest: '<%= site.app %>/assets/js/lib/jszip/',
             filter: 'isFile'
           }
         ]
@@ -202,12 +209,19 @@ module.exports = function(grunt) {
           '<%= site.app %>/assets/js/app/app-concat.min.js': ['<%= site.app %>/assets/js/app/app-concat.js']
         }
       }
-    }
+    },
 
+    'gh-pages': {
+      options: {
+        base: '_gh_pages'
+      },
+      src: ['**']
+    }
   });
 
   // These grunt plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-banner');
+  grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -234,6 +248,8 @@ module.exports = function(grunt) {
 
   // Optimise and Build images for production
   grunt.registerTask('buildimg', ['imagemin']);
+
+  grunt.registerTask('gitDeploy',['grunt_deploy']);
 
   // Default Task Less
   grunt.registerTask('default', ['less', 'imagemin', 'jshint', 'concat', 'uglify']);

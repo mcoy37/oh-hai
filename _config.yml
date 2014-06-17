@@ -20,7 +20,6 @@ issues:       "http://github.com/pongstr/oh-hai/issues"
 # -----------------------------------------------------------------------------
 markdown:     kramdown
 permalink:    pretty
-highlighter:  false
 paginate:     5
 
 

@@ -13,12 +13,66 @@
       smartypants: false
     };
 
+  // Zip Generator
+  var zip = new JSZip();
+
+
+
+
   // Data Updater: updates target content with new data
   // @data.target: html selector
   // @data.content: data from ace-editors
   function dataUpdater (data) {
     $(data.target).html(marked(data.content));
-    $('.output-preview pre > code').addClass('prettyprint linenums');
+
+    if (data.prettify) {
+      $('.output-preview pre > code')
+        .addClass('prettyprint linenums');
+    }
+
+    if (data.generator) {
+      $('[data-toggle=export]').on('click', function (e) {
+        var dataType = $(this).data('type'),
+            fileName = $('#filename').val();
+
+        function createFile (data) {
+          // Create file and add contents
+          zip.file(data.file_name, data.file_content);
+
+          var content = zip.generate({ type: 'blob' });
+
+          // Save Data as Zip now
+          saveAs(content, fileName + '.zip');
+        }
+
+        if (!fileName) {
+          alert('You should have a filename');
+        } else {
+          switch (dataType) {
+
+            case 'markdown':
+              createFile({
+                file_name: fileName + '.md',
+                file_content: data.content,
+                callback: function (content) {
+                  saveAs(content, fileName + '.zip');
+                }
+              });
+            break;
+
+            case 'html':
+              createFile({
+                file_name: fileName + '.html',
+                file_content: marked(data.content)
+              });
+            break;
+
+          }
+        }
+
+        e.preventDefault()
+      });
+    }
   }
 
   // Initialize Multiple Ace Editors
@@ -47,10 +101,12 @@
         })
       });
 
-    // Initial content for Syntax docs.
+    // Initial content docs.
     dataUpdater({
       target: $(editor.container).data('target'),
-      content: editor.session.getValue()
+      content: editor.session.getValue(),
+      prettify: true,
+      generator: true
     });
   }
 
@@ -61,7 +117,9 @@
   acEditor({
     id: 'editor',
     mode: 'markdown',
-    theme: 'monokai'
+    theme: 'monokai',
+    prettify: true,
+    generator: true
   });
 
   // Prettify the code

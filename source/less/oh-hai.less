@@ -14,6 +14,14 @@ header {
   height: @navbar-height;
 }
 
+// Override Bootstrap Modal-Footer
+.modal-footer {
+  text-align: center !important;
+}
+
+// Editor and Preview Styles
+// ==========================================================================
+
 .editor-container {
   .clearfix();
   position: fixed;
@@ -118,6 +126,6 @@ header {
 
 // Line Numbers IE Specific: IE indents via margin-left
 .lt-ie9 .prettyprint ol.linenums {
-  margin:       0;
-  margin-left:  33px;
+  margin: 0;
+  margin-left: 33px;
 }
