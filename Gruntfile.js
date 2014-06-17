@@ -249,7 +249,7 @@ module.exports = function(grunt) {
   // Optimise and Build images for production
   grunt.registerTask('buildimg', ['imagemin']);
 
-  grunt.registerTask('gitDeploy',['grunt_deploy']);
+  grunt.registerTask('ghpages',['gh-pages']);
 
   // Default Task Less
   grunt.registerTask('default', ['less', 'imagemin', 'jshint', 'concat', 'uglify']);

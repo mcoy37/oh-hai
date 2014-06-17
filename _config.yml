@@ -31,5 +31,5 @@ exclude:      ['Gruntfile.js', 'package.json', 'bower.json', 'node_modules', 'bo
 # Server
 host:         localhost
 port:         4001
-baseurl:      /
+baseurl:      http://pongstr.github.io/oh-hai/
 destination:  _gh_pages
